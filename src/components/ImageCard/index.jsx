@@ -8,7 +8,9 @@ const ImageCard = ({ id, title, url, isInFavourites, addToFavourites, removeFrom
             <img src={url} alt={title} />
             <p>{title}</p>
             {!isInFavourites ?
-                <button onClick={() => addToFavourites(id)}>Add to Favourites</button> :
+                <button
+                    className="add"
+                    onClick={() => addToFavourites(id)}>Add to Favourites</button> :
                 <button
                     className="favourite"
                     onClick={() => removeFromFavourites(id)}>Favourite</button>

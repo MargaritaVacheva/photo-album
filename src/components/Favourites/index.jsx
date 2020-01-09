@@ -2,12 +2,12 @@ import React from 'react';
 import FavouritesCarousel from '../FavouritesCarousel';
 
 const Favourites = () => {
-    return ( 
-        <section>
-        <h1>Favourites photos</h1>
+    return (
+        <section className="favourites">
+            <h2>Favourites photos</h2>
             <FavouritesCarousel />
         </section>
-     );
+    );
 }
- 
+
 export default Favourites;

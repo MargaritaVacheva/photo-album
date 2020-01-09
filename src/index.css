@@ -62,13 +62,28 @@ main p {
 }
 
 .buttons-select button,
-.photo-card button.favourite{
+.photo-card button.favourite,
+.photo-card button.add {
     margin: 0 0.4em;
     padding: 0.2em 0.6em;
     border-radius: 0.4em;
+    color: rgba(255, 255, 255);
+}
+
+.buttons-select button,
+.photo-card button.favourite {
     border-color: rgb(216, 28, 94);
     background-color: rgb(216, 28, 94);
-    color: rgba(255, 255, 255);
+}
+
+.photo-card button {
+    /* position: absolute;
+    bottom: 0; */
+}
+
+.photo-card button.add {
+    border-color: rgb(28, 216, 53);
+    background-color: rgb(28, 216, 53);
 }
 
 .album-gallery,
@@ -93,6 +108,9 @@ main p {
 }
 
 div.photo-card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
     flex: 0 1 17%;
     width: calc( (100% / 5) - 10em );
     height: 20em;
@@ -111,6 +129,10 @@ div.photo-card p {
     font-size: 0.9em;
 }
 
+section.favourites h2 {
+    margin-top: 2em;
+}
+
 .slick-slide div div {
     width: 80%;
     margin: 1em auto;
@@ -125,5 +147,5 @@ div.photo-card p {
 }
 
 .slider-wrapper {
-    margin: 2em auto 5em auto;
+    margin: 0 auto 5em auto;
 }
