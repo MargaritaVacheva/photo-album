@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PhotoAlbum from '../PhotoAlbum';
-import AlbumsLinks from './AlbumsLinks';
-import { albumIds } from '../../utils/constants';
+import AlbumsSelector from './AlbumsSelector';
 
 const PhotoGallery = () => {
-    const [albumId, setAlbumId] = useState(1);
-    const handleChoosingAlbum = (id) => {
-        setAlbumId(id);
-    }
 
     return (
         <section className='photo-gallery'>
             <h1>Photo gallery</h1>
-            <AlbumsLinks albumIds={albumIds} 
-                handleChoosingAlbum={handleChoosingAlbum}/>
-            <PhotoAlbum albumId={albumId}
-                albumIds={albumIds} />
-            <AlbumsLinks albumIds={albumIds} 
-                handleChoosingAlbum={handleChoosingAlbum}/>
+            <AlbumsSelector/>
+            <PhotoAlbum />
+            <AlbumsSelector />
         </section>
     );
 }

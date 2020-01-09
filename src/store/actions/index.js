@@ -1,6 +1,7 @@
 import {
     ADD_TO_FAVOURITES,
     REMOVE_FROM_FAVOURITES,
+    SELECT_ALBUM,
     FETCH_PHOTOS_START,
     FETCH_PHOTOS_ERROR,
     FETCH_PHOTOS_SUCCESS
@@ -22,6 +23,13 @@ function removeFromFavourites(id) {
     }
 }
 
+function selectAlbum(id) {
+    return {
+        type: SELECT_ALBUM,
+        payload: { id }
+    }
+}
+
 //photos actions
 
 function startFetchingPhotos() {
@@ -37,10 +45,10 @@ function fetchPhotosSuccess(data) {
     }
 }
 
-function fetchPhotosError(error) {
+function fetchPhotosError(err) {
     return {
         type: FETCH_PHOTOS_ERROR,
-        payload: { error }
+        payload: { error: err }
     }
 }
 
@@ -49,9 +57,11 @@ function fetchPhotos() {
         dispath(startFetchingPhotos());
         load()
             .then(data => dispath(fetchPhotosSuccess(data)))
-            .catch(err => dispath(fetchPhotosError(err)))
+            .catch(err => {
+                dispath(fetchPhotosError(err.message))
+            })
     }
 }
 
 
-export { addToFavourites, removeFromFavourites, fetchPhotos };
+export { addToFavourites, removeFromFavourites, selectAlbum, fetchPhotos };
