@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import Main from '../Main';
-import { fetchPhotos } from '../../store/actions';
+import Main from 'components/Main';
+import { fetchPhotos } from 'store/actions';
 
 function App({ loadPhotos }) {
   useEffect(() => {
