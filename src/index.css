@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700|Pacifico&display=swap');
-@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 
 * {
     margin: 0;
@@ -19,6 +18,7 @@ html {
 
 body {
     color: #333;
+    background-color: rgba(231, 218, 101, 0.5);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,69 +37,6 @@ p, ul, ol {
     padding-bottom: 1rem;
 }
 
-/* .site-header {
-    background-color: #F1F5F8;
-    padding: 0.3rem 0.8rem;
-}
-
-.site-header nav {
-    display: inline-block;  
-}
-
-.site-header nav ul {
-    padding: 0;
-}
-
-.site-header ul li {
-    display: inline-block;
-    background: #FF7F50;
-    padding: 0.4rem;
-    border-radius: 0.5rem;
-    margin-bottom: 0.4rem;
-}
-
-.site-header ul li:not(:last-child) {
-    margin-right: 0.8rem;
-}
-
-.site-header ul li a {
-    text-decoration: none;
-    color: #FFF;
-}
-
-.site-header ul li a:before {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f015';
-    display: inline-block;
-    font-weight: 900;
-    padding-right: 0.4rem;
-}
-
-.site-header ul li:nth-child(2) a:before {
-    content: '\f500'
-}
-
-.site-header ul li:nth-child(3) a:before {
-    content: '\f2b9'
-}
-
-.site-header ul li:nth-child(4) a:before {
-    content: '\f781'
-}
-
-.site-header ul li:nth-child(4) a:before {
-    content: '\f2bb'
-}
-
-.header-title {
-    display: inline-block;
-    font-family: 'Pacifico', serif;
-    font-size: 30px;
-    color: #FF7F50;
-    width: 50%;
-    padding: 0;
-} */
-
 main section {
     text-align: center;
 }
@@ -108,20 +45,60 @@ main p {
     font-size: 20px;
 }
 
+.photo-gallery h1 {
+    margin-top: 1em;
+    font-family: 'Pacifico', serif;
+    color: rgb(216, 28, 94);
+}
+
+.buttons-albums span {
+    font-size: 1.2em;
+    font-family: serif;
+}
+
+.buttons-select {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.buttons-select button,
+.photo-card button.favourite{
+    margin: 0 0.4em;
+    padding: 0.2em 0.6em;
+    border-radius: 0.4em;
+    border-color: rgb(216, 28, 94);
+    background-color: rgb(216, 28, 94);
+    color: rgba(255, 255, 255);
+}
+
+.album-gallery,
+.slider-wrapper {
+    width: 90%;
+    margin: 1em auto;
+    padding: 2em 2em;
+    border: 1px solid rgba(128, 128, 128);
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.5);
+    background-color: rgb(255, 255, 255);
+}
+
+.album-gallery h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(216, 28, 94);
+}
+
 .album-cards {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
     margin: 0 auto;
 }
 
 div.photo-card {
     flex: 0 1 17%;
-    border: 1px solid rgba(128, 128, 128, 0.774);
     width: calc( (100% / 5) - 10em );
     height: 20em;
     padding: 0.8em;
     margin: 1em;
+    border: 1px solid rgba(128, 128, 128, 0.774);
 }
 
 div.photo-card img {
@@ -134,3 +111,19 @@ div.photo-card p {
     font-size: 0.9em;
 }
 
+.slick-slide div div {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.slick-arrow,
+.slick-arrow:hover,
+.slick-next:before, .slick-prev:before {
+    border-radius: 50%;
+    color: rgba(255, 255, 255);
+    background-color: rgb(216, 28, 94);
+}
+
+.slider-wrapper {
+    margin: 2em auto 5em auto;
+}

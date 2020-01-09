@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { selectAlbum } from '../../../store/actions'
 
-const AlbumsSelector = ({ albumsIds, chooseAlbum }) => {
+const AlbumsSelector = ({ albumsIds, selectAlbum }) => {
     return (
         <div className='buttons-albums'>
-            <span>Choose album: </span>
+            <span>Select album: </span>
+            <div className="buttons-select">
             {albumsIds.map(id => {
-                return <button onClick={() => chooseAlbum(id)}
-                    key={id}>{id}</button>
+                return <button onClick={() => selectAlbum(id)}
+                key={id}>{id}</button>
             })}
+            </div>
         </div>
     );
 }
@@ -19,7 +21,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    chooseAlbum: (id) => dispatch(selectAlbum(id))
+    selectAlbum: (id) => dispatch(selectAlbum(id))
 })
 export default connect(
     mapStateToProps,
