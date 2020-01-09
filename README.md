@@ -31,6 +31,8 @@
   * Favourites album
       * section with all your favourites images
       * behave like carousel if images are more than 5
+      
+  * Persistence for favourite property after reloading
  
  ## License
  [MIT License](https://github.com/MargaritaVacheva/React-project/blob/master/LICENSE)
