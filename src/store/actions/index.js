@@ -5,8 +5,8 @@ import {
     FETCH_PHOTOS_START,
     FETCH_PHOTOS_ERROR,
     FETCH_PHOTOS_SUCCESS
-} from '../actionTypes';
-import load from '../../services/photo-services';
+} from 'store/actionTypes';
+import load from 'services/photo-services';
 
 
 function addToFavourites(id) {

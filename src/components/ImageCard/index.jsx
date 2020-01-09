@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToFavourites, removeFromFavourites } from '../../store/actions';
+import { addToFavourites, removeFromFavourites } from 'store/actions';
 
 const ImageCard = ({ id, title, url, isInFavourites, addToFavourites, removeFromFavourites }) => {
     return (

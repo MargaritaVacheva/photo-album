@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from "react-slick";
-import ImageCard from '../ImageCard';
+import ImageCard from 'components/ImageCard';
 
 const CustomSlider = ({ favouritesIds, images }) => {
     const settings = {
-        dots: images.length < 20,
+        dots: images.length < 30,
         infinite: images.length > 5,
         speed: 500,
         slidesToShow: 5,

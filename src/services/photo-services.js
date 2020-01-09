@@ -1,4 +1,4 @@
-import { store } from '../store/store';
+import { store } from 'store/store';
 
 //transform albumsIds in uri querry param
 

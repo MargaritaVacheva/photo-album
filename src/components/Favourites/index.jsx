@@ -1,5 +1,5 @@
 import React from 'react';
-import FavouritesCarousel from '../FavouritesCarousel';
+import FavouritesCarousel from 'components/FavouritesCarousel';
 
 const Favourites = () => {
     return (

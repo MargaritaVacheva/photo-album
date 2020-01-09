@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CustomSlider from '../CustomSlider';
+import CustomSlider from 'components/CustomSlider';
 
 const PhotoAlbum = ({ albumId, photos, isLoading, error, favourites }) => {
 

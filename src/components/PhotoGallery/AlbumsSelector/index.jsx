@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectAlbum } from '../../../store/actions'
+import { selectAlbum } from 'store/actions'
 
 const AlbumsSelector = ({ albumsIds, selectAlbum }) => {
     return (

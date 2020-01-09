@@ -1,6 +1,6 @@
 import React from 'react';
-import PhotoAlbum from '../PhotoAlbum';
-import AlbumsSelector from './AlbumsSelector';
+import PhotoAlbum from 'components/PhotoAlbum';
+import AlbumsSelector from 'components/PhotoGallery/AlbumsSelector';
 
 const PhotoGallery = () => {
 

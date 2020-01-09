@@ -1,4 +1,4 @@
-import {FETCH_PHOTOS_START, FETCH_PHOTOS_ERROR, FETCH_PHOTOS_SUCCESS} from '../actionTypes';
+import {FETCH_PHOTOS_START, FETCH_PHOTOS_ERROR, FETCH_PHOTOS_SUCCESS} from 'store/actionTypes';
 
 const initialState = {
     isFetching: false,

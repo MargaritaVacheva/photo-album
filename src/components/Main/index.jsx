@@ -1,6 +1,6 @@
 import React from 'react';
-import PhotoGallery from '../PhotoGallery';
-import Favourites from '../Favourites';
+import PhotoGallery from 'components/PhotoGallery';
+import Favourites from 'components/Favourites';
 
 const Main = () => {
 

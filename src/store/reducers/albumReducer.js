@@ -1,4 +1,4 @@
-import { SELECT_ALBUM } from '../actionTypes';
+import { SELECT_ALBUM } from 'store/actionTypes';
 
 const initialState = {
     currentAlbum: 1,

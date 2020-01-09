@@ -1,4 +1,4 @@
-import { ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES } from '../actionTypes';
+import { ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES } from 'store/actionTypes';
 
 function favouritesReducer(state = [], action) {
     switch(action.type){
