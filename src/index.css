@@ -18,7 +18,11 @@ html {
 
 body {
     color: #333;
-    background-color: rgba(231, 218, 101, 0.5);
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.1)), url('./photos/joanna-kosinska-78uNJt1kPw8-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,11 +80,6 @@ main p {
     background-color: rgb(216, 28, 94);
 }
 
-.photo-card button {
-    /* position: absolute;
-    bottom: 0; */
-}
-
 .photo-card button.add {
     border-color: rgb(28, 216, 53);
     background-color: rgb(28, 216, 53);
@@ -91,9 +90,8 @@ main p {
     width: 90%;
     margin: 1em auto;
     padding: 2em 2em;
-    border: 1px solid rgba(128, 128, 128);
     box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.5);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.5);
 }
 
 .album-gallery h3 {
@@ -116,6 +114,7 @@ div.photo-card {
     height: 20em;
     padding: 0.8em;
     margin: 1em;
+    background-color: white;
     border: 1px solid rgba(128, 128, 128, 0.774);
 }
 
@@ -131,6 +130,7 @@ div.photo-card p {
 
 section.favourites h2 {
     margin-top: 2em;
+    color: rgb(216, 28, 94);
 }
 
 .slick-slide div div {
