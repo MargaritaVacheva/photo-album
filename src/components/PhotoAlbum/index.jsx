@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import load from '../../services/photo-services';
+import React from 'react';
+import { connect } from 'react-redux';
 
-const PhotoAlbum = ({ albumId, albumIds }) => {
-    const [photos, setPhotos] = useState(null);
-
-    useEffect(() => {
-        load()
-        .then(data => {
-            let loadedPhotos = data.filter( p => p.albumId === albumId );
-            setPhotos(loadedPhotos);
-            console.log(loadedPhotos);
-        })
-        .catch(err => console.log(err))
-    }, [albumId])
-
+const PhotoAlbum = ({ albumId, photos, isLoading }) => {
 
     return (
         <section>
             <h3>Photos from album: {albumId}</h3>
-            { photos ?
+            { !isLoading ?
                 photos.map(p => {
                     return (
                         <div className="photo-card" key={p.id}>
@@ -27,10 +15,16 @@ const PhotoAlbum = ({ albumId, albumIds }) => {
                         </div>
                     )
                 }) :
-                <div>Loading</div>
+                <div>Loading...</div>
             }
         </section>
     );
 }
+const mapStateToProps = (state) => ({
+    photos: state.photos.data,
+    isLoading: state.photos.isFetching
+})
 
-export default PhotoAlbum;
+export default connect(
+    mapStateToProps
+)(PhotoAlbum);

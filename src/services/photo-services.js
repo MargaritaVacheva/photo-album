@@ -1,4 +1,11 @@
-const photosUrl = 'https://jsonplaceholder.typicode.com/photos';
+import { albumIds } from '../utils/constants';
+
+//transform albumIds in uri querry param
+
+let querryStirng = albumIds.map((id) => `albumId[]=${id}`).join('&');
+
+
+let photosUrl = `https://jsonplaceholder.typicode.com/photos?${querryStirng}`;
 
 const errorHandler = res => {
     if (!res.ok) throw new Error(res.status);

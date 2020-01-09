@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,166 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700|Pacifico&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+* {
+    margin: 0;
+    padding: 0;
 }
+
+html {
+    font-family: 'PT sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT serif', serif;
+    padding-bottom: 1em;
+}
+
+h1 { font-size: 3.0rem;  }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.2rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.4rem; }
+h6 { font-size: 1.2rem; }
+
+p, ul, ol {
+    padding-bottom: 1rem;
+}
+
+.site-header {
+    background-color: #F1F5F8;
+    padding: 0.3rem 0.8rem;
+}
+
+.site-header nav {
+    display: inline-block;  
+}
+
+.site-header nav ul {
+    padding: 0;
+}
+
+.site-header ul li {
+    display: inline-block;
+    background: #FF7F50;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.site-header ul li:not(:last-child) {
+    margin-right: 0.8rem;
+}
+
+.site-header ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.site-header ul li a:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f015';
+    display: inline-block;
+    font-weight: 900;
+    padding-right: 0.4rem;
+}
+
+.site-header ul li:nth-child(2) a:before {
+    content: '\f500'
+}
+
+.site-header ul li:nth-child(3) a:before {
+    content: '\f2b9'
+}
+
+.site-header ul li:nth-child(4) a:before {
+    content: '\f781'
+}
+
+.site-header ul li:nth-child(4) a:before {
+    content: '\f2bb'
+}
+
+.header-title {
+    display: inline-block;
+    font-family: 'Pacifico', serif;
+    font-size: 30px;
+    color: #FF7F50;
+    width: 50%;
+    padding: 0;
+}
+
+main section {
+    text-align: center;
+}
+
+main p {
+    font-size: 20px;
+}
+
+.main-image {
+    /* background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('./image/brooke-lark-u1XO8rGzMTQ-unsplash.jpg'); */
+    background-size: cover;
+    padding: 13rem 0;
+    color: #FFF;
+}
+
+.main-image h1 {
+    letter-spacing: 2px;
+    max-width: 50%;
+    margin: 0 auto;
+    text-shadow: 2px 2px 2px rgba(38,16,10,0.8); 
+}
+
+.main-image p {
+    max-width: 50%; 
+    margin: 0 auto;
+}
+
+.gallery {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    background: rgba(255, 127, 80, 0.2);
+}
+
+.gallery ul {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-bottom: 0;
+}
+
+.gallery ul li {
+    display: inline-block;
+    max-width: 20rem;
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 2.5rem;
+    padding: 1rem; 
+    background: #FFF;
+    border: 0.5rem solid black;
+}
+
+.gallery ul li:not(:nth-child(3n+3)) {
+   margin-right: 2.5rem;
+}
+
+.gallery ul li img {
+    max-width: 100%;
+    height: auto; 
+}
+
+

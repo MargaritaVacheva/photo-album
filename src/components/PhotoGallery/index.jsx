@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PhotoAlbum from '../PhotoAlbum';
-import AlbumsLinks from './AlbumsLinks'
+import AlbumsLinks from './AlbumsLinks';
+import { albumIds } from '../../utils/constants';
 
 const PhotoGallery = () => {
     const [albumId, setAlbumId] = useState(1);
-    const albumIds = [1, 2, 3, 4, 5];
     const handleChoosingAlbum = (id) => {
         setAlbumId(id);
     }
