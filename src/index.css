@@ -1,17 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700|Pacifico&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 
@@ -51,7 +37,7 @@ p, ul, ol {
     padding-bottom: 1rem;
 }
 
-.site-header {
+/* .site-header {
     background-color: #F1F5F8;
     padding: 0.3rem 0.8rem;
 }
@@ -112,7 +98,7 @@ p, ul, ol {
     color: #FF7F50;
     width: 50%;
     padding: 0;
-}
+} */
 
 main section {
     text-align: center;
@@ -122,54 +108,29 @@ main p {
     font-size: 20px;
 }
 
-.main-image {
-    /* background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('./image/brooke-lark-u1XO8rGzMTQ-unsplash.jpg'); */
-    background-size: cover;
-    padding: 13rem 0;
-    color: #FFF;
-}
-
-.main-image h1 {
-    letter-spacing: 2px;
-    max-width: 50%;
-    margin: 0 auto;
-    text-shadow: 2px 2px 2px rgba(38,16,10,0.8); 
-}
-
-.main-image p {
-    max-width: 50%; 
+.album-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
     margin: 0 auto;
 }
 
-.gallery {
-    padding: 2.5rem 2.5rem 0 2.5rem;
-    background: rgba(255, 127, 80, 0.2);
+div.photo-card {
+    flex: 0 1 17%;
+    border: 1px solid rgba(128, 128, 128, 0.774);
+    width: calc( (100% / 5) - 10em );
+    height: 20em;
+    padding: 0.8em;
+    margin: 1em;
 }
 
-.gallery ul {
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-bottom: 0;
+div.photo-card img {
+    width: 90%;
+    height: 60%;
+    margin: 0.4em auto;
 }
 
-.gallery ul li {
-    display: inline-block;
-    max-width: 20rem;
-    height: auto;
-    vertical-align: middle;
-    margin-bottom: 2.5rem;
-    padding: 1rem; 
-    background: #FFF;
-    border: 0.5rem solid black;
+div.photo-card p {
+    font-size: 0.9em;
 }
-
-.gallery ul li:not(:nth-child(3n+3)) {
-   margin-right: 2.5rem;
-}
-
-.gallery ul li img {
-    max-width: 100%;
-    height: auto; 
-}
-
 
