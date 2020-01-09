@@ -1,29 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ImageCard from '../ImageCard';
+import CustomSlider from '../CustomSlider';
 
 const PhotoAlbum = ({ albumId, photos, isLoading, error, favourites }) => {
+
+    let images = photos
+        .filter(p => p.albumId === albumId);
 
     return (
         <section className="album-gallery">
             <h3>Album: {albumId}</h3>
             {isLoading ?
                 <div>Loading...</div> :
-                <div className="album-cards">
+                <div>
+                    <CustomSlider images={images} favouritesIds={favourites} />
                     {error && <p>{error}</p>}
-                    {photos
-                        .filter(p => p.albumId === albumId)
-                        .map(p => {
-                            let isInFavourites = favourites.includes(p.id);
-                            return (
-                                <ImageCard
-                                    key={p.id}
-                                    id={p.id}
-                                    title={p.title}
-                                    url={p.url}
-                                    isInFavourites={isInFavourites} />
-                            )
-                        })}
                 </div>}
         </section>
     );
